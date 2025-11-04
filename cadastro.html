@@ -1,96 +1,52 @@
-<!doctype html>
-<form id="formCadastro" action="#" method="post" novalidate>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - ONG Esperança</title>
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <header>
+    <h1>ONG Esperança</h1>
+    <span class="menu-mobile">☰</span>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <section style="grid-column: span 12;">
+      <h2>Cadastre-se como voluntário 💪</h2>
+    </section>
 
-<fieldset>
-<legend>Dados pessoais</legend>
+    <form>
+      <label>Nome Completo*</label>
+      <input type="text" name="nome" required />
 
+      <label>E-mail*</label>
+      <input type="email" name="email" required />
 
-<label for="nome">Nome completo *</label>
-<input id="nome" name="nome" type="text" required minlength="3" autocomplete="name">
+      <label>Área de Interesse*</label>
+      <select name="area" required>
+        <option value="">Selecione</option>
+        <option value="educacao">Educação</option>
+        <option value="alimentacao">Alimentação</option>
+        <option value="animais">Animais</option>
+      </select>
 
+      <button type="submit">Enviar Cadastro</button>
+    </form>
+  </main>
 
-<label for="email">E-mail *</label>
-<input id="email" name="email" type="email" required autocomplete="email">
+  <footer>
+    <p>© 2025 ONG Esperança - Todos os direitos reservados</p>
+  </footer>
 
-
-<label for="cpf">CPF *</label>
-<input id="cpf" name="cpf" type="text" inputmode="numeric" maxlength="14" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00">
-
-
-<label for="telefone">Telefone *</label>
-<input id="telefone" name="telefone" type="tel" inputmode="tel" required maxlength="15" placeholder="(00) 90000-0000">
-
-
-<label for="nascimento">Data de nascimento *</label>
-<input id="nascimento" name="nascimento" type="date" required>
-
-
-</fieldset>
-
-
-<fieldset>
-<legend>Endereço</legend>
-
-
-<label for="cep">CEP *</label>
-<input id="cep" name="cep" type="text" inputmode="numeric" maxlength="9" required pattern="\d{5}-\d{3}" placeholder="00000-000">
-
-
-<label for="endereco">Endereço *</label>
-<input id="endereco" name="endereco" type="text" required>
-
-
-<label for="cidade">Cidade *</label>
-<input id="cidade" name="cidade" type="text" required>
-
-
-<label for="estado">Estado *</label>
-<select id="estado" name="estado" required>
-<option value="" disabled selected>Escolha o estado</option>
-<option value="SP">SP</option>
-<option value="RJ">RJ</option>
-<option value="MG">MG</option>
-</select>
-
-
-</fieldset>
-
-
-<fieldset>
-<legend>Preferências</legend>
-<label for="perfil">Perfil</label>
-<select id="perfil" name="perfil">
-<option value="voluntario">Voluntário</option>
-<option value="doador">Doador</option>
-<option value="visitante">Visitante</option>
-</select>
-
-
-<label for="mensagem">Mensagem (opcional)</label>
-<textarea id="mensagem" name="mensagem" rows="4" maxlength="600" placeholder="Como você gostaria de contribuir?"></textarea>
-</fieldset>
-
-
-<div class="botoes">
-<button type="reset">Limpar</button>
-<button type="submit">Enviar</button>
-</div>
-
-
-</form>
-</div>
-</section>
-</main>
-
-
-<footer class="site-footer">
-<div class="container">
-<p>&copy; ONG</p>
-</div>
-</footer>
-
-
-<script src="js/scripts.js" defer></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -62,3 +62,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+
+const menuMobile = document.querySelector(".menu-mobile");
+const navMenu = document.querySelector("nav ul");
+
+if (menuMobile && navMenu) {
+  menuMobile.addEventListener("click", () => {
+    navMenu.classList.toggle("ativo");
+  });
+}
+
+// Validação visual dos formulários
+const form = document.querySelector("form");
+if (form) {
+  form.addEventListener("submit", (e) => {
+    const inputs = form.querySelectorAll("input[required]");
+    let valido = true;
+
+    inputs.forEach(input => {
+      if (!input.value.trim()) {
+        input.style.border = "2px solid red";
+        valido = false;
+      } else {
+        input.style.border = "1px solid #ccc";
+      }
+    });
+
+    if (!valido) {
+      e.preventDefault();
+      alert("Por favor, preencha todos os campos obrigatórios!");
+    }
+  });
+}

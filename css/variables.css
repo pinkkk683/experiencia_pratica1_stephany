@@ -1,0 +1,31 @@
+:root {
+  /* 🎨 Paleta de Cores */
+  --cor-primaria: #2E7D32;
+  --cor-secundaria: #66BB6A;
+  --cor-terciaria: #A5D6A7;
+  --cor-destaque: #FFD54F;
+  --cor-alerta: #E53935;
+  --cor-sucesso: #43A047;
+  --cor-texto: #333333;
+  --cor-fundo: #FAFAFA;
+
+  /* 🧱 Tipografia */
+  --fonte-principal: 'Poppins', sans-serif;
+  --font-xxl: 2.5rem;
+  --font-xl: 2rem;
+  --font-lg: 1.5rem;
+  --font-md: 1rem;
+  --font-sm: 0.875rem;
+
+  /* 📏 Espaçamentos Modulares */
+  --espaco-1: 8px;
+  --espaco-2: 16px;
+  --espaco-3: 24px;
+  --espaco-4: 32px;
+  --espaco-5: 48px;
+  --espaco-6: 64px;
+
+  /* 🧩 Bordas e Sombras */
+  --radius: 8px;
+  --sombra-suave: 0 2px 8px rgba(0, 0, 0, 0.1);
+}

@@ -1,4 +1,4 @@
-// === MENU RESPONSIVO ===
+
 const menuMobile = document.querySelector(".menu-mobile");
 const nav = document.querySelector("nav ul");
 
@@ -6,7 +6,7 @@ menuMobile.addEventListener("click", () => {
   nav.classList.toggle("ativo");
 });
 
-// === MÁSCARAS DE INPUT ===
+
 function aplicarMascaraCPF(valor) {
   return valor
     .replace(/\D/g, "")
@@ -28,18 +28,18 @@ function aplicarMascaraCEP(valor) {
     .replace(/(\d{5})(\d)/, "$1-$2");
 }
 
-// === SELETORES DOS CAMPOS ===
+
 const form = document.getElementById("formCadastro");
 const cpf = document.getElementById("cpf");
 const telefone = document.getElementById("telefone");
 const cep = document.getElementById("cep");
 
-// === EVENTOS DE MÁSCARAS ===
+
 cpf.addEventListener("input", () => (cpf.value = aplicarMascaraCPF(cpf.value)));
 telefone.addEventListener("input", () => (telefone.value = aplicarMascaraTelefone(telefone.value)));
 cep.addEventListener("input", () => (cep.value = aplicarMascaraCEP(cep.value)));
 
-// === VALIDAÇÃO DE FORMULÁRIO ===
+
 form.addEventListener("submit", (e) => {
   e.preventDefault();
 
@@ -54,13 +54,13 @@ form.addEventListener("submit", (e) => {
     }
   });
 
-  // Validação de CPF simples
+
   if (cpf.value.length !== 14) {
     alert("CPF inválido. Verifique o formato (000.000.000-00).");
     valido = false;
   }
 
-  // Validação de CEP simples
+
   if (cep.value.length !== 9) {
     alert("CEP inválido. Verifique o formato (00000-000).");
     valido = false;
@@ -71,7 +71,7 @@ form.addEventListener("submit", (e) => {
     return;
   }
 
-  // Armazenamento local (simulação de cadastro)
+
   const dados = Object.fromEntries(new FormData(form).entries());
   localStorage.setItem("cadastroVoluntario", JSON.stringify(dados));
 
@@ -79,18 +79,18 @@ form.addEventListener("submit", (e) => {
   form.reset();
 });
 
-// === ESTILO VISUAL DE ERRO ===
+
 document.querySelectorAll("input, select").forEach((input) => {
   input.addEventListener("input", () => {
     input.classList.remove("erro");
   });
 });
 
-// === SINGLE PAGE APPLICATION SIMPLES ===
+
 const links = document.querySelectorAll("nav a");
 links.forEach((link) => {
   link.addEventListener("click", (e) => {
-    if (link.getAttribute("href").includes(".html")) return; // ignora páginas reais
+    if (link.getAttribute("href").includes(".html")) return; 
     e.preventDefault();
     const pagina = link.getAttribute("data-page");
     carregarConteudo(pagina);

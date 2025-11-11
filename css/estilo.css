@@ -3,14 +3,14 @@
 @import "layout.css";
 @import "components.css";
 
-/* Menu Mobile */
+
 .menu-mobile {
   display: none;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Breakpoints */
+
 @media (max-width: 1200px) {
   main { grid-template-columns: repeat(8, 1fr); }
 }

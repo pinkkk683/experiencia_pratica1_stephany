@@ -1,4 +1,4 @@
-/* Botões */
+
 button, .btn {
   background: var(--cor-primaria);
   color: white;
@@ -13,7 +13,7 @@ button:hover, .btn:hover {
   background: var(--cor-secundaria);
 }
 
-/* Cards */
+
 .card {
   grid-column: span 4;
   background: white;
@@ -34,7 +34,6 @@ button:hover, .btn:hover {
   padding: var(--espaco-3);
 }
 
-/* Formulário */
 form {
   display: flex;
   flex-direction: column;
@@ -53,7 +52,6 @@ input:focus {
   outline: 2px solid var(--cor-secundaria);
 }
 
-/* Badges e Tags */
 .badge {
   background: var(--cor-destaque);
   color: var(--cor-texto);
@@ -62,7 +60,6 @@ input:focus {
   font-size: var(--font-sm);
 }
 
-/* Alerts */
 .alert {
   padding: var(--espaco-2);
   border-radius: var(--radius);
